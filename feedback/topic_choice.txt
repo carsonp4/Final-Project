@@ -1,0 +1,13 @@
+"Hey guys could I get some feedback for the project?
+
+I have the following ideas:
+
+1. I am in an adult hockey league and was thinking about scrapping the game results from the website. I also think I could use a weather API to get data about the weather on each day. I wanted to do analysis if game time, weather, and playing surface affects the playing quality of the teams
+
+2. I thought it would be fun to try my hand at scrapping data off of imdb. There is so much data but their API is super expensive and the free downloads aren't very informative. I thought it would be interesting to scrape different data about movies and compare the data points to winners of oscars."
+
+"Personally, I like the idea of the movies but I need to admit that is not that original. So, the hockey one will be more interesting, and challenging." -Jeffry Troll
+
+"I like the movie idea. Particularly if you can combine the imdb with rotten tomatoes and or better critic. You could even try to find if there are a ton of YouTube critic videos made about a certain movie in relation to the oscars." -Joe Bradley
+
+"Hi, I actually would like to see the process of how you set up the first project you mentioned. You will use everything we have learned with APIs, webscraping and I bet you could do easy to follow models." -Isaac Aguilar
