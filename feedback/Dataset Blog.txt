@@ -1,0 +1,6 @@
+"Hey guys, would you be able to provide some feedback on how to enhance readability, clarity, and informativeness for my blog post?
+
+https://carsonp4.github.io/2023/11/16/movie-scrape.html"
+
+
+"I really like your post, Carson. Even though there's a little too much coding in my opinion, it's clean and organized. The only thing that I could add is to have another point of view, like extra content from someone else who did something similar. I think that it will increase your credibility by sharing a little bit of research that you did before the data analysis. Good job!" -Jeffry Troll
