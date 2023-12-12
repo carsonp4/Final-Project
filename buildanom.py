@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import datetime
 import pickle
+import urllib.request
 
 st.set_page_config(page_title="Build an Oscar Nominated Film")
 
@@ -38,32 +39,19 @@ st.sidebar.info("Read more about how the model works and see the code on my [Git
 
 st.title("Can you build an Oscar Nominated Film?")
 
-### Loading Data
-#url = "https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitdash.csv"
+### Loading Model
+url = "https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitmodel.pkl"
+filename = "streamlitmodel.pkl"
 
-#df = pd.read_csv(url, index_col=0)
+# Download the file
+urllib.request.urlretrieve(url, filename)
 
-### Making logistic Regression
-# Assuming the first column is the target variable, and the rest are features
-#X = df.iloc[:, 1:]  # Features (excluding the first column)
-#y = df.iloc[:, 0]   # Target variable (the first column)
-
-# Split the data into training and testing sets
-#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Initialize the logistic regression model
-#model = LogisticRegression()
-
-# Train the model on the training data
-#model.fit(X_train, y_train)
-
-model = pickle.load(open('https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitmodel.pkl', 'rb'))
-
+# Load the pickled model
+with open(filename, "rb") as file:
+    model = pickle.load(file)
 
 ### Make your own movie
-#movie = pd.DataFrame(0, index=[0], columns=df.columns).iloc[:, 1:]
 movie = pd.read_csv("https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitblank.csv", index_col=[0])
-
 
 movie["Runtime"] = st.slider('What is the Movie Runtime in Minutes?', 0, 300, 90)
 
@@ -80,44 +68,36 @@ movie["Release_Month"] = date.month
 movie["Release_Year"] = date.year
 movie["Release_DOY"] = date.timetuple().tm_yday
 
-rating_columns = [col for col in df.columns if col.startswith("Rating_")]
+rating_columns = [col for col in movie.columns if col.startswith("Rating_")]
 ratings = [rating.split('_')[1] if '_' in rating else rating for rating in rating_columns]
-rating_sums = [df[col].sum() for col in rating_columns]
-rating_sum_tuples = list(zip(ratings, rating_sums))
-sorted_ratings = sorted(rating_sum_tuples, key=lambda x: x[1], reverse=True)
-sorted_ratings = [rating for rating, _ in sorted_ratings]
-selected_rating = st.selectbox('What is The Film Rated?', sorted_ratings)
+selected_rating = st.selectbox('What is The Film Rated?', ratings)
 movie["Rating_" + selected_rating] = 1
 
-Genre_columns = [col for col in df.columns if col.startswith("Genre_")]
+Genre_columns = [col for col in movie.columns if col.startswith("Genre_")]
 Genres = [Genre.split('_')[1] if '_' in Genre else Genre for Genre in Genre_columns]
-Genre_sums = [df[col].sum() for col in Genre_columns]
-Genre_sum_tuples = list(zip(Genres, Genre_sums))
-sorted_Genres = sorted(Genre_sum_tuples, key=lambda x: x[1], reverse=True)
-sorted_Genres = [Genre for Genre, _ in sorted_Genres]
-selected_Genres = st.multiselect("What Genre(s) is Your Film?", sorted_Genres, ["Drama", "Action"])
+selected_Genres = st.multiselect("What Genre(s) is Your Film?", Genres, ["Drama", "Action"])
 for i in range(len(selected_Genres)):
     movie["Genre_" + selected_Genres[i]] = 1
 
-Director_columns = [col for col in df.columns if col.startswith("Director_")]
+Director_columns = [col for col in movie.columns if col.startswith("Director_")]
 Directors = [Director.split('_')[1] if '_' in Director else Director for Director in Director_columns]
 selected_Directors = st.multiselect("Who Directed Your Film?", Directors)
 for i in range(len(selected_Directors)):
     movie["Director_" + selected_Directors[i]] = 1
 
-Writer_columns = [col for col in df.columns if col.startswith("Writer_")]
+Writer_columns = [col for col in movie.columns if col.startswith("Writer_")]
 Writers = [Writer.split('_')[1] if '_' in Writer else Writer for Writer in Writer_columns]
 selected_Writers = st.multiselect("Who Wrote Your Film?", Writers)
 for i in range(len(selected_Writers)):
     movie["Writer_" + selected_Writers[i]] = 1
 
-Language_columns = [col for col in df.columns if col.startswith("Language_")]
+Language_columns = [col for col in movie.columns if col.startswith("Language_")]
 Languages = [Language.split('_')[1] if '_' in Language else Language for Language in Language_columns]
 selected_Languages = st.multiselect("What Language(s) is Your Film In?", Languages, ["English"])
 for i in range(len(selected_Languages)):
     movie["Language_" + selected_Languages[i]] = 1
 
-Country_columns = [col for col in df.columns if col.startswith("Country_")]
+Country_columns = [col for col in movie.columns if col.startswith("Country_")]
 Countrys = [Country.split('_')[1] if '_' in Country else Country for Country in Country_columns]
 selected_Countrys = st.multiselect("What Countries is Your Film From?", Countrys, ["United States"])
 for i in range(len(selected_Countrys)):
@@ -140,5 +120,6 @@ st.dataframe(movie)
 ### Show Probability
 if st.button('Find Out Movie Probability Of Being Oscar Best Film Nominated'):
     nom_prob = model.predict_proba(movie)[:, 1][0]
-    st.title("Probability of being nominated:")
-    st.title(nom_prob)
+    nom_precent = "{:.1%}".format(nom_prob)
+    st.title("Probability of being nominated for Best Film:")
+    st.title(nom_precent)
