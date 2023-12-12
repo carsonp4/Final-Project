@@ -5,31 +5,64 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import datetime
+import pickle
+
+st.set_page_config(page_title="Build an Oscar Nominated Film")
+
+st.sidebar.markdown(" ## About")
+st.sidebar.markdown("This prediction model allows you to build a movie based on various parameters. Once built, click on the button on the buttom of the page to find the probability that your film would be nominated for an Oscar for best film.")
+
+
+st.sidebar.markdown(" ## Resources")
+st.sidebar.markdown(
+    """
+- [Streamlit Documentation](https://docs.streamlit.io/)
+- [IMDB](https://help.imdb.com/article/contribution/other-submission-guides/awards/G5KGRJURZFQGHJQH#)
+- [OMDB](https://www.omdbapi.com/)
+- [BYU Professor Dr. Tass](https://statistics.byu.edu/directory/tass-shannon)
+""")
+
+st.sidebar.markdown(" ## Blog Posts")
+st.sidebar.markdown(
+    """
+- [Data Scrapping](https://carsonp4.github.io/2023/11/16/movie-scrape.html)
+- [EDA With This Dataset](https://carsonp4.github.io/2023/12/07/movie-eda.html)
+- [Building Movie Recommendation Model](https://carsonp4.github.io/2023/10/05/movie-ml.html)
+""")
+
+st.sidebar.markdown(" ## Info")
+st.sidebar.info("Read more about how the model works and see the code on my [Github](https://github.com/carsonp4/Final-Project).", icon="ℹ️")
+
+
+
 
 st.title("Can you build an Oscar Nominated Film?")
 
 ### Loading Data
-url = "https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitdash.csv"
+#url = "https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitdash.csv"
 
-df = pd.read_csv(url, index_col=0)
+#df = pd.read_csv(url, index_col=0)
 
 ### Making logistic Regression
 # Assuming the first column is the target variable, and the rest are features
-X = df.iloc[:, 1:]  # Features (excluding the first column)
-y = df.iloc[:, 0]   # Target variable (the first column)
+#X = df.iloc[:, 1:]  # Features (excluding the first column)
+#y = df.iloc[:, 0]   # Target variable (the first column)
 
 # Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Initialize the logistic regression model
-model = LogisticRegression()
+#model = LogisticRegression()
 
 # Train the model on the training data
-model.fit(X_train, y_train)
+#model.fit(X_train, y_train)
+
+model = pickle.load(open('https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitmodel.pkl', 'rb'))
 
 
 ### Make your own movie
-movie = pd.DataFrame(0, index=[0], columns=df.columns).iloc[:, 1:]
+#movie = pd.DataFrame(0, index=[0], columns=df.columns).iloc[:, 1:]
+movie = pd.read_csv("https://raw.githubusercontent.com/carsonp4/Final-Project/main/streamlitblank.csv", index_col=[0])
 
 
 movie["Runtime"] = st.slider('What is the Movie Runtime in Minutes?', 0, 300, 90)

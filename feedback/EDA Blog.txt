@@ -1,0 +1,8 @@
+"Could I also get three people to five feedback on my EDA blog post? I am happy to provide feedback to anyone that does so for me.
+
+https://carsonp4.github.io/2023/12/07/movie-eda.html"
+
+SHA code of blog shared: 0a1845bfeace20a4dbcc8e406b0674c407f5a9e0
+
+
+"I love the variety of your EDA plots! They're beautiful, and they all feel pretty individually significant since analyzing so many different variables and facets of your data. I'm a fan. I've only looked through a couple of people's projects at this point, so maybe I'm totally off but are we required to include code in the EDA section? If I had one true complaint about your EDA it's that the code blocks are so long it detracts from your gorgeous data visuals, where there could just be a link to your code repository. It'd give you a chance to fill in a little more discussion and longer conclusion because you have some really cool patterns in your data. (But again, I'm not sure about that. If you're reviewing other posts and see a lot of people including the code for their EDA, let me know. I don't want to mess up on my own project. The other post I reviewed didn't include code in the EDA section, just visuals and discussion.)" - Bethany Blake

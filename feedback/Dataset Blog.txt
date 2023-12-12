@@ -2,5 +2,14 @@
 
 https://carsonp4.github.io/2023/11/16/movie-scrape.html"
 
+SHA Code of this commit: aea4a1cdfbb8ab11149e8d294dd6d59e2cb9155b
 
 "I really like your post, Carson. Even though there's a little too much coding in my opinion, it's clean and organized. The only thing that I could add is to have another point of view, like extra content from someone else who did something similar. I think that it will increase your credibility by sharing a little bit of research that you did before the data analysis. Good job!" -Jeffry Troll
+
+"I'm a little torn between how satisfying it is to read your well-organized, thorough code and there being too much code in your blog post.  Because there are long lists of categories you were searching for, your have big blocks of code performing the same functions over many lines. It draws your attention to the big code blocks and away from you explaining your process. You could simplify it by substituting in some pseudo code, then referencing your code repository for the full code used. " - Bethany Blake
+
+"Hey Carson, your Blog is amazing. You did an incredible job searching for data sets and choosing the bests ones. I also like that you have a specific section for the Ethics you followed as you gathered the data. The flow of your blog is also great, very easy to follow. My only suggestion agrees with bethany's. Maybe you should share examples or sections of your code instead of the whole code. I understand that the idea would be reproducibility, but it makes it harder to read. Anyway, great job!" - Isaac Aguilar
+
+Revisions made:
+- I decided not to remove code because I want it to be a resource for people who want to replicate what I did in an organized way.
+- I did go back and include some information about how I couldn't find any dataset that I wanted so I needed to make my own.
