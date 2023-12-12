@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score
 import datetime
 import pickle
 import urllib.request
+import xgboost
 
 st.set_page_config(page_title="Build an Oscar Nominated Film")
 
