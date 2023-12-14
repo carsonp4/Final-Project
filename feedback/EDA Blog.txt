@@ -6,3 +6,10 @@ SHA code of blog shared: 0a1845bfeace20a4dbcc8e406b0674c407f5a9e0
 
 
 "I love the variety of your EDA plots! They're beautiful, and they all feel pretty individually significant since analyzing so many different variables and facets of your data. I'm a fan. I've only looked through a couple of people's projects at this point, so maybe I'm totally off but are we required to include code in the EDA section? If I had one true complaint about your EDA it's that the code blocks are so long it detracts from your gorgeous data visuals, where there could just be a link to your code repository. It'd give you a chance to fill in a little more discussion and longer conclusion because you have some really cool patterns in your data. (But again, I'm not sure about that. If you're reviewing other posts and see a lot of people including the code for their EDA, let me know. I don't want to mess up on my own project. The other post I reviewed didn't include code in the EDA section, just visuals and discussion.)" - Bethany Blake
+
+"-You used some sweet plots! I wouldn't have thought to use a 3d plot. It was cool, but like you mentioned in the post, kind of hard to read. Is there a way to make the points less large? That may help with readability.
+-I've given feedback to a few people to reduce the amount of code they show, but your code was actually really well documented. If you wanted to give up the pretty code snippets for more discussion of insights you saw, that may improve your post, but that would be a big change and having well commented code is serviceable.
+-Could you give a description of a chord plot before showing it? It looks really cool but I don't actually know what it's showing
+-You may want to consider adding a link to your dashboard in the post if that's where you want readers to go after reading it" - Orion
+
+"-I agree with Orion, you used cool graphs!  but I'm not a fun of 3d plot. I think there are some big chunk of codes in the middle (Which Director’s Films are the most successful?), probably I will separate them one part of gettting what you want and then the figure. Maybe it might contribute to readability." - Jeffry Troll

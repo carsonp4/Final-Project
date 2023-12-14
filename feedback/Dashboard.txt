@@ -1,0 +1,22 @@
+"I just finished my good version of my dashboard. It doesn't have interactive graphs because I got permission from Dr. Tass to make mine a bit different. If I could get 3 people to give feedback then I would be eternally grateful. 
+
+Streamlit:
+https://oscarnombuilder.streamlit.app/"
+
+SHA Code of this commit: d2cf451f190017621c4b862a90d6ef2eec2c3e37
+
+
+"Your dashboard was cool in that it let users interact with the data in a very different way from your post. It may be helpful to talk about which factors matter the most somewhere in there so people can make a good attempt. I'm assuming the goal is to get 100%, but that seems kind of unrealistic. You may also want to include a goal like "See if you can hit 50% probability for a prize!". As I type that more it seems kinda silly, but at least something to show where I can be aiming for.
+I like the sidebar as well, although "Scrapping" may want to be changed to "Scraping"" - Orion
+
+"I really like the usability in this app with the adjustments you can make to the probability of nomination. I also appreciate the table at the end, it's a helpful tool to visualize the inputs I made throughout the app. Even though you have links to your blog posts and repo, I do think it might be helpful to provide some extra context to the study in the app—maybe add some more to the side bar introduction or some information on which factors you found to be the most influential in determining nomination probability. Overall super cool!" - Aaron Brown
+
+"This is impressively complex and I love the format with the side bar
+-There's a typo in the side bar About section ("buttom")
+-There are a lot of inputs and they sort of blend together with all the rows. It would be nice if there were some sort of grid of inputs so we could see more at the same time and not have to scroll as much.
+-Displaying the table with all the choices we had is cool but I'm not sure what it's purpose is for the user. I'd consider removing it or adding a new section for it and giving some context about it.
+-I'd like to see the button at the bottom stand out more with a different color background or centered on the page. You could also simplify the text in it to just be something like "Calculate Probability"
+-This would be a lot of work but I'd want to see the awards nominated and won formatted a bit differently. I'd split up the nominations and the winning inputs and change the display text from  ('ADG','Animated')_nomination" to something like "Best Animated Film - ADG" to make it a little easier to read/use" - Aaron Ostrich
+
+"It is easy to use and understand. It does feel a bit like a buzzed quiz where don't know the reason why the number comes out that way."
+
