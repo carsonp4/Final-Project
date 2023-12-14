@@ -13,3 +13,9 @@ SHA code of blog shared: 0a1845bfeace20a4dbcc8e406b0674c407f5a9e0
 -You may want to consider adding a link to your dashboard in the post if that's where you want readers to go after reading it" - Orion
 
 "-I agree with Orion, you used cool graphs!  but I'm not a fun of 3d plot. I think there are some big chunk of codes in the middle (Which Director’s Films are the most successful?), probably I will separate them one part of gettting what you want and then the figure. Maybe it might contribute to readability." - Jeffry Troll
+
+
+Revisions made based on feedback:
+- People mentioned not to include code. I wanted to make my blog post really easy for others to replicate so I want to keep the code in there for others to read and copy. They also said the commenting was well done so I think that is good.
+- Add description of chord plot
+- Add link to dashboard

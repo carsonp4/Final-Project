@@ -18,5 +18,11 @@ I like the sidebar as well, although "Scrapping" may want to be changed to "Scra
 -I'd like to see the button at the bottom stand out more with a different color background or centered on the page. You could also simplify the text in it to just be something like "Calculate Probability"
 -This would be a lot of work but I'd want to see the awards nominated and won formatted a bit differently. I'd split up the nominations and the winning inputs and change the display text from  ('ADG','Animated')_nomination" to something like "Best Animated Film - ADG" to make it a little easier to read/use" - Aaron Ostrich
 
-"It is easy to use and understand. It does feel a bit like a buzzed quiz where don't know the reason why the number comes out that way."
+"It is easy to use and understand. It does feel a bit like a buzzfeed quiz where don't know the reason why the number comes out that way." - My wife
+
+Revisions based on feedback:
+- Change "Scrapping" to "Scraping". Change "buttom" to "bottom"
+- Add a goal of 60% to get to
+- Add info on prediction model
+- Change button color
 

@@ -12,7 +12,11 @@ import xgboost
 st.set_page_config(page_title="Build an Oscar Nominated Film")
 
 st.sidebar.markdown(" ## About")
-st.sidebar.markdown("This prediction model allows you to build a movie based on various parameters. Once built, click on the button on the buttom of the page to find the probability that your film would be nominated for an Oscar for best film.")
+st.sidebar.markdown("This prediction model allows you to build a movie based on various parameters. Once built, click on the button on the bottom of the page to find the probability that your film would be nominated for an Oscar for best film.")
+
+st.sidebar.markdown("The model is designed using an XGBoost binary classification. As a result of this, the model is not very interpreatable so there isn't much non-intuitive advice I can offer you to try and get a good score.")
+
+st.sidebar.markdown("From what I can tell, getting a score over 60% is pretty hard so if you can do that, you win!")
 
 
 st.sidebar.markdown(" ## Resources")
@@ -27,7 +31,7 @@ st.sidebar.markdown(
 st.sidebar.markdown(" ## Blog Posts")
 st.sidebar.markdown(
     """
-- [Data Scrapping](https://carsonp4.github.io/2023/11/16/movie-scrape.html)
+- [Data Scraping](https://carsonp4.github.io/2023/11/16/movie-scrape.html)
 - [EDA With This Dataset](https://carsonp4.github.io/2023/12/07/movie-eda.html)
 - [Building Movie Recommendation Model](https://carsonp4.github.io/2023/10/05/movie-ml.html)
 """)
@@ -124,3 +128,5 @@ if st.button('Find Out Movie Probability Of Being Oscar Best Film Nominated'):
     nom_precent = "{:.1%}".format(nom_prob)
     st.title("Probability of being nominated for Best Film:")
     st.title(nom_precent)
+    if nom_prob > 0.6:
+        st.title("You beat the game! Congratulations 🥳")
